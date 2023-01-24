@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS GENERAL DE LA PAGINA */
+body{
+    background: black;
+    color: #fff;
+    }
+
+/* ESTILOS CONTENEDOR PRINCIPAL */
+#contenedor{
+    width: 100%x;           /*Escala al 100% para hacer responsive la navegacion */
+    max-width: 1000px;
+    margin: 0.2em auto;
+    padding: 0.2em;
+}
+
+/* ESTILOS DE LA CABECERA */
+#header{
+    width:100%;
+    height: 15%;
+    background: black;
+    border: 2px solid #ee930a;
+    padding: 10px;
+    display:flex;
+    align-items:center;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+/* ESTILOS DEL NAVEGADOR */
+#nav{
+    height: 7%;
+    background: grey;
+    border-radius: 1em;
+    margin: 1em;
+    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
+}
+
+/* ESTILOS CAJA CENTRAL Y LATERAL */
+#content{
+    height:60%;
+    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
+    margin: 1em;
+}
+
+/* ESTILOS PIE DE PAGINA */
+#footer{
+    height: 7%;
+    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
+    background: black;
+    border: 2px solid #ee930a;
+    padding: 10px;
+    display:flex;
+    align-items:center;
+    border-radius: 1em;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+/* ESTILOS CAJA DE CONTENIDOS DE LA IZQUIERDA*/
+#cont_caja_central{
+    height: 95%;
+    width: 60%;         /*Escala al 60% para hacer responsive la navegacion */
+    background: grey;
+    float: left;
+    margin: 0.5em;
+}
+
+/* ESTILOS CAJA LATERAL*/
+#aside{
+    height: 95%;
+    width: 35%;         /*Escala al 35% para hacer responsive la navegacion */
+    background: grey;
+    float: right;
+    margin: 0.5em;
+}
+
+/* ESTILOS DE LA CLASE foto */
+.foto{
+    display: flex;
+    align-items: center;
+  }
+
+/* ESTILOS DE LA IMAGEN */
+.foto img{
+    height: 150px;
+    margin-right: 10px;
+  }    
+
+img {
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ESTILOS DE LA TIPOGRAFIA H1 */
+header h1 {
+    font-size: 50px;
+    text-align: left;
+    font-family: 'Cormorant SC', serif;
+    text-decoration: none; 
+}
+
+/* ESTILOS DE LA TIPOGRAFIA H2 */
+header h2 {
+    font-size: 30px;
+    text-align: left;
+    line-height: 50px;
+    font-family: 'Asap Condensed', sans-serif;
+    color:#fff;
+    font-weight: bold;
+}
+
+/* ESTILOS DE LA TIPOGRAFIA H3 DENTRO DEL CONTENEDOR LATERAL */
+aside h4 {
+    font-size: 10px;
+    text-align: left;
+    line-height: 50px;
+    font-family: 'Oswald';
+    color:#fff;
+}
+
+/* ESTILOS DE LA TIPOGRAFIA H3 DENTRO DEL CONTENEDOR DEL CENTRO */
+content h3{
+    font-size: 40px;
+    text-align: left;
+    line-height: 50px;
+    font-family: 'Oswald', sans-serif;
+    color:#fff;
+    font-weight: bold;
+}
+
+/* ESTILOS DE LA CAJA DEL NAVEGADOR*/
+.nav-enlace{
+    display: inline-flex;
+    background: salmon;
+    color: #fff;
+    padding: 10px 60px;
+    text-decoration: none;
+}
+
+/* ESTILOS DE LOS BOTONES DEL NAVEGADOR cuando el navegador pasa por arriba*/
+.nav-enlace:hover{
+    background: rosybrown;
+}
+
+/* ESTILOS DEL TEXTO DE LOS BOTONES DEL NAVEGADOR*/
+nav a{
+    font-weight: 40;
+    padding-right: 10px
+}
+ 
+/* ESTILOS DEL COLOR DEL TEXTO DE LOS BOTONES DEL NAVEGADOR*/
+nav a:hover{
+    color: white;
+}
+
+/* PADDING DEL NAVEGADOR*/
+nav {
+    padding: 10px;
+}
+
+/* ESTILOS DEL TEXTO H2 DEL NAVEGADOR */
+nav h2 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+}  
+
+/* ESTILOS DEL TEXTO H3 dentro de la caja lateral*/
+aside h3 {
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-align: center;
+    line-height: 600px;	
+    color: white;
+}
+
+.p{
+    margin: 10px 10px 10px 10px;
+    padding:  10px 10px 10px 10px;
+    text-align: justify;
+}
+
+
+/* Codigo para hacer responsiva la pagina */
+
+/* Para Celulares: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* Para tabletas: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* Para pantallas de escritorio: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+/* ESTILOS DE LA LISTA DE LA CAJA CENTRAL*/
+  li {
+    line-height: 0.5;
+    margin: 30px;
+  }
+
+/* ESTILOS DE LA LISTA DE ELEMENTOS DE LA CAJA CENTRAL*/
+  #section ul li {
+    color: white;
+    text-decoration: none;
+    font: normal 20px arial;
+    line-height: 20px;
+    text-align: left;
+    margin: 20px;
+    }
+
+/* ESTILOS DE LOS ICONOS DE LA CAJA DE CONTENIDOS*/
+#contenedor span{
+    font-size: 20px;
+    margin: 50px;
+    line-height: 20px;
+    padding: 20px
+}
+
+.icon-home3:before {
+    content: "\e902";
+    color: yellow;
+  }
+
+  .icon-mobile2:before {
+    content: "\e959";
+    color: yellow;
+
+  }
+
+  .icon-mail2:before {
+    content: "\ea84";
+    color: yellow;
+  }
+
+  .icon-location:before {
+    content: "\e947";
+    color: yellow;
+  }
+
+  .icon-users:before {
+    content: "\e972";
+    color: yellow;
+  }
+
+  .icon-library:before {
+    content: "\e972";
+    color: yellow;
+  }
+  .icon-quill:before {
+    content: "\e921";
+    color: yellow
+  }
+
+  /* ICONOS PEQUEÑOS REDES SOCIALES */
+  .icon-facebook:before {
+    content: "\ea90";
+    color: yellow;
+  }
+
+  .icon-play:before {
+    content: "\e912";
+    color: yellow;
+  }
+
+  .icon-linkedin:before {
+    content: "\eac9";
+    color: yellow;
+  }
+
+  .icon-twitter:before {
+    content: "\ea96";
+    color: yellow;
+}
+
+ /* ESTILO DE LA FUENTE DEL FOOTER */
+.redes h2{             
+font-weight: bold;
+}
+
+/* IMAGENES PNG DE LA CLASE REDES */
+.sociales{
+    text-align: center;
+    size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+}
+
+.sociales li{
+    display: inline-block;
+}
+
+/*
+.sociales a{
+    padding: 0px;
+ /*   width: 2px;
+    height:2px;
+}*/
+
+
+.img2 {
+    width:60px;
+    height: 60px;
+ }
