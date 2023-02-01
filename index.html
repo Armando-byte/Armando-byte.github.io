@@ -1,119 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">      original-->
-        <meta name="viewport" content="width=<device-width>, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="estilos.css">
 
-                <!-- Icono de la pagina -->
+    <!-- Icono de la pagina -->
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3882/3882362.png">
     <title>Proyecto Integrador</title>
     <link rel="stylesheet" href="css/estilos.css">
-                <!-- Fuentes Google Font -->
+
+    <!-- Fuentes Google Font ------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200&family=Cormorant+SC:wght@500&family=Oswald:wght@300&display=swap" rel="stylesheet">
 
-                <!-- Libreria de Iconos -->
-    <link rel="stylesheet" href="style.css">
- 
+    <!-- link a iconos de Redes Sociales con efecto hover ---------------------------->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- link a iconos de mail, domicilio, celular, etc. ---------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-<!------------------CONTENEDOR MAYOR------------------->    
-<div id="contenedor">   
+    <div class="contenedor">
+		<header class="header">
 
-    <!------------------ CAJA CABECERA --------------------->
-    <div id="header">
-        <a class="foto">
-            <img src="Imagenes/Yo2.png" alt="Foto del Solicitante" height="100px" widht="100px" />
+            <a href="#" class="foto">           <!-- el "<a" es para vincular a otras paginas -->
+                <img src="Imagenes/Yo2.png" alt="Foto del Solicitante" />
+            </a>
+
             <center>
-            <h1>Curriculum Vitae</h1>
-            <h2>Armando Osvaldo GONZALEZ</h2>
+            <h1 class="Curriculum-Vitae">Armando GONZALEZ</h1>
+            <p>Curriculum-Vitae </P>
             </center>
-        </a>
-    </div> 
 
-    <!-------------------CAJA NAVEGADOR --------------------->
-    <div id="nav"> 
-        <nav>
-        <!--    Menu de navegacion    -->
-            <a href="#" class="nav-enlace">Inicio</a>
-            <a href="#" class="nav-enlace">Sobre mi</a>
-            <a href="#" class="nav-enlace">Servicios</a>
-            <a href="#" class="nav-enlace">Contacto</a>
-        </nav>
-    </div>
+            <nav>
+                <!--    Menu de navegacion    -->
+                <a href="#" class="nav-enlace">Inicio</a>
+                <a href="paginas/sobreMi.html" class="nav-enlace">Sobre mi</a>
+                <a href="paginas/servicios.html" class="nav-enlace">Servicios</a>
+            </nav>
+  
+		</header>
 
-    <!------------------- CAJA DE CONTENIDO ------------------>
-    <div id="content">   
+		<Contenedor class="contenido">
+            <p>
+                <h3>Datos personales</h3>
+                <ul>
+                    <li><i class="fa-solid fa-user"></i> ARMANDO OSVALDO GONZALEZ </li>
+                    <li><i class="fa-solid fa-school"></i> Escuela Técnica N°1 - José Menendez </li>
+                    <li><i class="fa-solid fa-baby"></i> 12/10/1966 </li></br>
+                </ul>
+                <h3>Datos de Contacto</h3>
+                <ul>
+                    <li> <i class="fa-solid fa-city"></i> Rio Gallegos - Sta Cruz</li>
+                    <li> <i class="fa-solid fa-house"></i> 25 de Mayo 1425</li>
+                    <li><i class="fa-solid fa-at"></i> Carlos1966@gmail.com</li>
+                    <li><i class="fa-solid fa-mobile-retro"></i>  +54296615599963</li>
+                </ul>
+			</p>
 
-        <!------------------- Caja central ------------------------>
-        <div id="cont_caja_central">
+            <br>
             
-            <h3 ><u>Experiencia Laboral</u></h3>
+            <h3 >Experiencia Laboral</h3></br>
 
-                <ul>
-                    <li class="icon-users"> ARMANDO OSVALDO GONZALEZ</LI>
-                    <li class="icon-library"> Escuela Técnica N°1 - José Menendez </li>
-                    <li class="icon-quill"> Carrera profesional </li>
-                    <li>Profesor de software de diseño en distintas areas</li>
-                    <li>Experto en software 2d (Autocad)</li>
-                    <li>Experto en software 3d (Revit, Archicad) </li>
-                    <li>Manejo de Excel y Hojas de Calculo Google (google Sheet)</li>
-                </ul>
+            <p>
+                Profesor de software de diseño en distintas areas<br>
+                Experto en software 2d (Autocad)<br>
+                Experto en software 3d (Revit, Archicad) <br>
+                Manejo de Excel y Hojas de Calculo Google (google Sheet)<br>
+                Ofimática en general<br>
+                Profesor de Fisica en escuela secundaria<br>
+            </p><br>
+ 
+        </Contenedor>
 
-                <hr>
+        <aside class="sidebar">
+            <center><h3>Propuesta laboral</h3><br>
+            <p class="parrafo">Como parte de mi tarea habitual, con el afán de mejorar el servicio educativo, trabajo en propuestas superadoras, con el objeto de que mis compañeros docentes adquieran conocimientos y habilidades en el manejo de las Tecnologias de la Informacion y la Comunicación.</p>
+            <p class="parrafo">Adjunto a la presente, los videos <b>Demo 1</b> y <b>Demo 2</b> que demuestran a pleno el desarrollo de esta actividad</p>
+            </center>
+		</aside>
 
-            <h3><u>Mis datos de contacto</u></h3>
+		<div class="widget-1">
+            <center><h4>Demo 1</h4> <br>
+            <iframe width=100% height=100% src="https://www.youtube.com/embed/kmQfII4qSv8?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+			
+		</div>
 
-                <ul>
-                    <li class="icon-location"> Rio Gallegos - Sta Cruz</LI>
-                    <li class="icon icon-home3"> 25 de Mayo 1425</li>
-                    <li class="icon-mail2"> Carlos1966@gmail.com</li>
-                    <li class="icon-mobile2">  +54296615599963</li>
-                </ul>
-        </div>
+        <div class="widget-2">
+			<center><h4>Demo 2</h4> <br>
+            <iframe width=100% height=100% src="https://www.youtube.com/embed/x8_pVQcAwqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+		</div>
 
-        
-        <!------------------- Caja Lateral ------------------------>
-         <div id="aside">
-            <h3>Mis videos dando clases</h3>
+		<footer class="footer">
 
-                <center><iframe width="300" height="200" src="https://www.youtube.com/embed/kmQfII4qSv8?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
-                <h3>Capacitando a otros colegas</h3>
-                <center><iframe width="300" height="200" src="https://www.youtube.com/embed/x8_pVQcAwqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
-                <pre>  Como parte de mi tarea habitual, 
-  con el afán de mejorar el servicio
-  educativo, trabajo en propuestas 
-  superadoras, con el objeto de que
-  mis compañeros docentes adquieran
-  conocimientos y habilidades en el 
-  manejo de las Tecnologias de la
-  Informacion y la Comunicación.</pre>
-        
-        </div>
-        
-    </div>
+			<h3>Buscame</h3>
 
-    <!------------------- CAJA DEL PIE DE PAGINA ------------------>
-    <div id="footer">
+            <div class="icon">
+                <svg heigth="80" width="80">
+                    <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none" ></circle>
+                </svg>                
+                <a href="https://www.instagram.com/" target="_blank">                
+                <i class='bx bxl-instagram'></i>
+                </a>
+            </div>
+   
+            <div class="icon">
+                <svg heigth="80" width="80">
+                    <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none" ></circle>
+                </svg>
+                <a href="https://www.facebook.com/" target="_blank">
+                <i class='bx bxl-facebook-circle'></i>
+                </a>
+            </div>
+             
+            <!-- Por razones obvias no hago la vinculacion a mi wasap -->
+            <div class="icon">
+                <svg heigth="80" width="80">
+                    <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none" ></circle>
+                </svg>
+                <i class='bx bxl-whatsapp' ></i>
+            </div>
+    
+            <div class="icon">
+                <svg heigth="80" width="80">
+                    <circle cx="40" cy="40" r=35 stroke="white" stroke-width="4" fill="none" ></circle>
+                </svg>
+                <a href="https://twitter.com/" target="_blank">
+                <i class='bx bxl-twitter' ></i>
+                </a>
+            </div>
 
-        <div class="redes"></div>
-        <h2>Buscame en:</h2>
-        <ul class="sociales">  
-            <lI><a href="https://www.faceboook.com/" target="blank"><img src="imagenes/facebook.png" class="img2" width="auto"></a></li>
-            <li><a href="https://www.twitter.com/" target="blank"><img src="imagenes/twitter.png" class="img2" width="auto"></a></li>
-            <li><a href="https://www.youtube.com/" target="blank"><img src="imagenes/youtube.png" class="img2" width="auto"></a></li>
-            <li><a href="https://www.linkedin.com/" target="blank"><img src="imagenes/linkedin.png" class="img2" width="auto"></a></li>  
-        </ul>
-        
-    </div>
-
-<!------------------FIN CONTENEDOR PRINCIPAL ------------------>  
-</div>
+		</footer>
+	</div>
 
 </body>
 </html>
