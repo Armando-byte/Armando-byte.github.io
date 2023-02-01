@@ -1,102 +1,159 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* ESTILOS GENERAL DE LA PAGINA */
 body{
     background: black;
     color: #fff;
+	font-family: 'Roboto', sans-serif;
     }
 
-/* ESTILOS CONTENEDOR PRINCIPAL */
-#contenedor{
-    width: 100%x;           /*Escala al 100% para hacer responsive la navegacion */
-    max-width: 1000px;
-    margin: 0.2em auto;
-    padding: 0.2em;
+a{
+    text-decoration: none;
+    color: white;
 }
 
-/* ESTILOS DE LA CABECERA */
-#header{
-    width:100%;
-    height: 15%;
-    background: black;
-    border: 2px solid #ee930a;
-    padding: 10px;
-    display:flex;
-    align-items:center;
-    border-radius: 1em;
-    margin: 1em;
+nav a {
+font-weight: 600;
+padding-inline-end: 10px;
 }
 
-/* ESTILOS DEL NAVEGADOR */
-#nav{
-    height: 7%;
-    background: grey;
-    border-radius: 1em;
-    margin: 1em;
-    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
+nav a:hover{
+    color: aqua;
 }
 
-/* ESTILOS CAJA CENTRAL Y LATERAL */
-#content{
-    height:60%;
-    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
-    margin: 1em;
+p {
+	text-align: justify;
 }
-
-/* ESTILOS PIE DE PAGINA */
-#footer{
-    height: 7%;
-    width:100%;      /*Escala al 100% para hacer responsive la navegacion */
-    background: black;
-    border: 2px solid #ee930a;
-    padding: 10px;
-    display:flex;
-    align-items:center;
-    border-radius: 1em;
-    margin: 1em;
-    border-radius: 1em;
-}
-
-/* ESTILOS CAJA DE CONTENIDOS DE LA IZQUIERDA*/
-#cont_caja_central{
-    height: 95%;
-    width: 60%;         /*Escala al 60% para hacer responsive la navegacion */
-    background: grey;
-    float: left;
-    margin: 0.5em;
-}
-
-/* ESTILOS CAJA LATERAL*/
-#aside{
-    height: 95%;
-    width: 35%;         /*Escala al 35% para hacer responsive la navegacion */
-    background: grey;
-    float: right;
-    margin: 0.5em;
-}
-
-/* ESTILOS DE LA CLASE foto */
-.foto{
-    display: flex;
-    align-items: center;
-  }
 
 /* ESTILOS DE LA IMAGEN */
-.foto img{
-    height: 150px;
-    margin-right: 10px;
-  }    
+.foto{
+    display: flex;          /*Es para que la foto se vea horizontal junto con los otros elementos */
+    align-items: center;    /* Alinea verticalmente los elementos dentro de .foto*/
+}
 
-img {
-    width:150px;
-    height: 150px;
+.foto img{
+    margin-right: 10px;     /* separa la foto 10px del texto*/
+    width:100px;            /* tamaño de la imagen */
+    height: 100px;
     border-radius: 50%;
     border: 2px solid gray;
     object-fit: cover;
-    object-position: center;
+    object-position: center; 
+}
+
+.parrafo {
+	font-family: verdana;
+	font-size: 18px;
+	text-align: justify;
+	color: #12203E;
+
+}
+
+.contenido{
+	font-family: verdana;
+	font-size: 18px;
+	text-align: justify;
+	color: #12203E;
+
+}
+
+@media (max-width: 700px) {
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+
+    display: flex;              /*Es para que los elementos se muestren de manera horizontal*/
+    min-height: 80px;           /* min-height: altura minima para que se adapte automaticamente */
+    justify-content: space-between ;     /* justify-left: Justifica los elementos a la izq del eje principal */
+    align-items: center;                /*  alinea elementos verticalmente */
+    padding: 10px;              /*Separa 10px los elementos del borde*/
+
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #fAA43D;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+.contenedor .footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;    
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
 }
 
 
@@ -110,131 +167,32 @@ header h1 {
 
 /* ESTILOS DE LA TIPOGRAFIA H2 */
 header h2 {
-    font-size: 30px;
-    text-align: left;
-    line-height: 50px;
-    font-family: 'Asap Condensed', sans-serif;
-    color:#fff;
-    font-weight: bold;
-}
-
-/* ESTILOS DE LA TIPOGRAFIA H3 DENTRO DEL CONTENEDOR LATERAL */
-aside h4 {
-    font-size: 10px;
-    text-align: left;
-    line-height: 50px;
-    font-family: 'Oswald';
-    color:#fff;
-}
-
-/* ESTILOS DE LA TIPOGRAFIA H3 DENTRO DEL CONTENEDOR DEL CENTRO */
-content h3{
-    font-size: 40px;
-    text-align: left;
-    line-height: 50px;
-    font-family: 'Oswald', sans-serif;
-    color:#fff;
-    font-weight: bold;
-}
-
-/* ESTILOS DE LA CAJA DEL NAVEGADOR*/
-.nav-enlace{
-    display: inline-flex;
-    background: salmon;
-    color: #fff;
-    padding: 10px 60px;
-    text-decoration: none;
-}
-
-/* ESTILOS DE LOS BOTONES DEL NAVEGADOR cuando el navegador pasa por arriba*/
-.nav-enlace:hover{
-    background: rosybrown;
-}
-
-/* ESTILOS DEL TEXTO DE LOS BOTONES DEL NAVEGADOR*/
-nav a{
-    font-weight: 40;
-    padding-right: 10px
-}
- 
-/* ESTILOS DEL COLOR DEL TEXTO DE LOS BOTONES DEL NAVEGADOR*/
-nav a:hover{
-    color: white;
-}
-
-/* PADDING DEL NAVEGADOR*/
-nav {
-    padding: 10px;
-}
-
-/* ESTILOS DEL TEXTO H2 DEL NAVEGADOR */
-nav h2 {
-    font-size: 40px;
-    text-align: center;
-    line-height: 40px;
-}  
-
-/* ESTILOS DEL TEXTO H3 dentro de la caja lateral*/
-aside h3 {
-    font-family: 'Oswald';
     font-size: 20px;
-    text-align: center;
-    line-height: 600px;	
-    color: white;
-}
-
-.p{
-    margin: 10px 10px 10px 10px;
-    padding:  10px 10px 10px 10px;
-    text-align: justify;
+    text-align: left;
+    line-height: 50px;
+	font-family: 'Oswald';
+     color:#fff;
 }
 
 
-/* Codigo para hacer responsiva la pagina */
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-2"
+						 "footer footer footer";
+	}
+}
 
-/* Para Celulares: */
-[class*="col-"] {
-    width: 100%;
-  }
-  
-  @media only screen and (min-width: 600px) {
-    /* Para tabletas: */
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
-  }
-  @media only screen and (min-width: 768px) {
-    /* Para pantallas de escritorio: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
 
 /* ESTILOS DE LA LISTA DE LA CAJA CENTRAL*/
-  li {
+li {
     line-height: 0.5;
     margin: 30px;
   }
 
-/* ESTILOS DE LA LISTA DE ELEMENTOS DE LA CAJA CENTRAL*/
+/* ESTILOS DE LA LISTA DE ELEMENTOS*/
   #section ul li {
     color: white;
     text-decoration: none;
@@ -244,96 +202,52 @@ aside h3 {
     margin: 20px;
     }
 
-/* ESTILOS DE LOS ICONOS DE LA CAJA DE CONTENIDOS*/
-#contenedor span{
-    font-size: 20px;
-    margin: 50px;
-    line-height: 20px;
-    padding: 20px
+/* ESTILOS DE LOS ICONOS */
+.icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all .8s;
+    cursor: pointer;
 }
 
-.icon-home3:before {
-    content: "\e902";
-    color: yellow;
-  }
 
-  .icon-mobile2:before {
-    content: "\e959";
-    color: yellow;
-
-  }
-
-  .icon-mail2:before {
-    content: "\ea84";
-    color: yellow;
-  }
-
-  .icon-location:before {
-    content: "\e947";
-    color: yellow;
-  }
-
-  .icon-users:before {
-    content: "\e972";
-    color: yellow;
-  }
-
-  .icon-library:before {
-    content: "\e972";
-    color: yellow;
-  }
-  .icon-quill:before {
-    content: "\e921";
-    color: yellow
-  }
-
-  /* ICONOS PEQUEÑOS REDES SOCIALES */
-  .icon-facebook:before {
-    content: "\ea90";
-    color: yellow;
-  }
-
-  .icon-play:before {
-    content: "\e912";
-    color: yellow;
-  }
-
-  .icon-linkedin:before {
-    content: "\eac9";
-    color: yellow;
-  }
-
-  .icon-twitter:before {
-    content: "\ea96";
-    color: yellow;
+.icon:hover {
+    background-color: #e60073;
+    box-shadow:  0 0 20px #e60073 ;
 }
 
- /* ESTILO DE LA FUENTE DEL FOOTER */
-.redes h2{             
-font-weight: bold;
+.icon:hover:nth-child(2) {
+    background-color: #1877f2;
+    box-shadow:  0 0 20px #1877f2;
 }
 
-/* IMAGENES PNG DE LA CLASE REDES */
-.sociales{
-    text-align: center;
-    size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;    
+.icon:hover:nth-child(3) {
+    background-color: #25d366;
+    box-shadow: 0 0 20px #25d366 ;
 }
 
-.sociales li{
-    display: inline-block;
+.icon:hover:nth-child(4) {
+    background-color: #1da1f2;
+    box-shadow:  0 0 20px #1da1f2 ;
 }
 
-/*
-.sociales a{
-    padding: 0px;
- /*   width: 2px;
-    height:2px;
-}*/
+.icon i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.7rem;
+}
 
+svg circle {
+    stroke-dasharray: 150;
+    transition: all .8s ease-in-out;
+}
 
-.img2 {
-    width:60px;
-    height: 60px;
- }
+.icon:hover circle {
+    stroke-dasharray: 220;
+}
