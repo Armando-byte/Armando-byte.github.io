@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+/* ESTILOS GENERAL DE LA PAGINA */
+body{
+    background: black;
+    color: #fff;
+	font-family: 'Roboto', sans-serif;
+    }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+font-weight: 600;
+padding-inline-end: 10px;
+}
+
+nav a:hover{
+    color: rgb(173, 183, 242);
+}
+
+p {
+	text-align: justify;
+}
+
+/* ESTILOS DE LA IMAGEN */
+.foto{
+    display: flex;          /*Es para que la foto se vea horizontal junto con los otros elementos */
+    align-items: center;    /* Alinea verticalmente los elementos dentro de .foto*/
+}
+
+.foto img{
+    margin-right: 10px;     /* separa la foto 10px del texto*/
+    width:100px;            /* tamaño de la imagen */
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.parrafo {
+	font-family: verdana;
+	font-size: 18px;
+	text-align: justify;
+	color: #12203E;
+
+}
+
+.contenido{
+	font-family: verdana;
+	font-size: 18px;
+	text-align: justify;
+	color: #12203E;
+
+}
+
+
+/*  ********Codigo descartado********
+
+@media (max-width: 700px) {
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+*/
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+/* ESTILOS DE LA CABECERA */
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+
+    border-radius: 1em;
+    border: 2px solid #ee930a;
+
+    display: flex;                      /*Es para que los elementos se muestren de manera horizontal*/
+    min-height: 80px;                   /* min-height: altura minima para que se adapte automaticamente */
+    justify-content: space-between ;     /* justify-left: Justifica los elementos a la izq del eje principal */
+    align-items: center;                /*  alinea elementos verticalmente */
+    padding: 10px;                      /*Separa 10px los elementos del borde*/
+
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+    border-radius: 1em;
+    border: 2px solid #ee930a;
+
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #55a8fd;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+
+    border-radius: 1em;
+    border: 2px solid #ee930a;
+
+}
+
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+    border-radius: 1em;
+    border: 2px solid #ee930a;
+	
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+.contenedor .footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;    
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+
+    border-radius: 1em;
+    border: 2px solid #ee930a;
+}
+
+
+/* ESTILOS DE LA TIPOGRAFIA H1 */
+header h1 {
+    font-size: 50px;
+    text-align: left;
+    font-family: 'Cormorant SC', serif;
+    text-decoration: none; 
+}
+
+/* ESTILOS DE LA TIPOGRAFIA H2 */
+header h2 {
+    font-size: 20px;
+    text-align: left;
+    line-height: 50px;
+	font-family: 'Oswald';
+     color:#fff;
+}
+
+
+@media screen and (max-width: 780px){    /* primero 768px*/
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-2"
+						 "footer footer footer";
+	}
+}
+
+
+/* ESTILOS DE LA LISTA DE LA CAJA CENTRAL*/
+li {
+    line-height: 0.5;
+    margin: 30px;
+  }
+
+/* ESTILOS DE LA LISTA DE ELEMENTOS*/
+  #section ul li {
+    color: white;
+    text-decoration: none;
+    font: normal 20px arial;
+    line-height: 20px;
+    text-align: left;
+    margin: 20px;
+    }
+
+/* ESTILOS DE LOS ICONOS */
+.icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: all .8s;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #e60073;
+    box-shadow:  0 0 20px #e60073 ;
+}
+
+.icon:hover:nth-child(2) {
+    background-color: #1877f2;
+    box-shadow:  0 0 20px #1877f2;
+}
+
+.icon:hover:nth-child(3) {
+    background-color: #25d366;
+    box-shadow: 0 0 20px #25d366 ;
+}
+
+.icon:hover:nth-child(4) {
+    background-color: #1da1f2;
+    box-shadow:  0 0 20px #1da1f2 ;
+}
+
+.icon i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.7rem;
+}
+
+svg circle {
+    stroke-dasharray: 150;
+    transition: all .8s ease-in-out;
+}
+
+.icon:hover circle {
+    stroke-dasharray: 220;
+}
+
+/* ESTILOS DEL FORMULARIO DE CONTACTO */
+
+form {
+  width: 50%;
+ margin: 0 auto;
+}
+
+label, input, textarea {
+display: block;
+margin-bottom: 10px;
+}
+
+input, textarea {
+padding: 5px;
+border-radius: 3px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 3px;
+font-size: 16px;
+cursor: pointer;
+}
+
+
+
+
